@@ -69,7 +69,7 @@
             ownerId: "ee5a500b-159a-4527-aefa-8d93572b39a3",
             displayName: "Bank of America",
             logoUrl: {
-                "href": "https://images.getbills.com/logos/0000000308001.gif"
+                href: "https://images.getbills.com/logos/0000000308001.gif"
             },
             alias: "Bank of America",
             category: "CREDITCARDS",
@@ -94,6 +94,23 @@
             highlights: {
                 displayName: [
                     "discover"
+                ],
+                alias: []
+            }
+        },
+        {
+            externalId: "62455e87d82af71c627f5090",
+            ownerId: "c046047f-0197-43d6-a057-886b6f99817a",
+            displayName: "Wells Fargo",
+            logoUrl: {
+                href: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Wells_Fargo_Logo_%282020%29.svg/2048px-Wells_Fargo_Logo_%282020%29.svg.png"
+            },
+            alias: "Wells Fargo",
+            category: "CREDITCARDS",
+            highlights: {
+                displayName: [
+                    "wells",
+                    "fargo"
                 ],
                 alias: []
             }
