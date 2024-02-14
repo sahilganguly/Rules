@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         PayPal Add Biller
 // @namespace    http://tampermonkey.net/
-// @version      0.8
+// @version      0.9
 // @description  Add old billers to PayPal Bill Pay
 // @author       Apocalypsor
 // @match        https://www.paypal.com/myaccount/payments/*
@@ -80,6 +80,22 @@
                     "america"
                 ],
                 alias: []
+            }
+        },
+        {
+            externalId: "578",
+            ownerId: "ee5a500b-159a-4527-aefa-8d93572b39a3",
+            displayName: "Citi",
+            logoUrl: {
+                href: "https://images.getbills.com/logos/0000006827001.jpg"
+            },
+            alia": "Citi",
+            category: "CREDITCARDS",
+            highlights: {
+                displayName: [
+                    "citi"
+                ],
+                alia": []
             }
         },
         {
