@@ -120,7 +120,7 @@
     const originalOpen = XMLHttpRequest.prototype.open;
     XMLHttpRequest.prototype.open = function() {
         this.addEventListener('readystatechange', function() {
-            if (this.readyState === 4 && this.responseURL.includes('suggested-payees/ppbp')) {
+            if (this.readyState === 4 && this.responseURL.includes('suggested-payees/ppbp?')) {
                 try {
                     const json = JSON.parse(this.responseText);
                     json.data.payees.payees = customePayees;
