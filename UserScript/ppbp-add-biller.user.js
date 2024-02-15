@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         PayPal Add Biller
 // @namespace    http://tampermonkey.net/
-// @version      0.10.2
+// @version      0.11.1
 // @description  Add old billers to PayPal Bill Pay
 // @author       Apocalypsor
 // @match        https://www.paypal.com/myaccount/payments/*
@@ -134,6 +134,40 @@
             }
         },
         {
+            externalId: "5f91ed869c92e7f690fd4b2d",
+            ownerId: "c046047f-0197-43d6-a057-886b6f99817a",
+            displayName: "US Bank",
+            logoUrl: {
+                href: "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,f_jpg,h_559,q_65,w_639/v1/crm/catalinaislandccvb/usbankshortsales0-7b28c92f5056a36_7b28ca2e-5056-a36a-06032a74b695d9a0.jpg"
+            },
+            alias: "US Bank",
+            category: "CREDITCARDS",
+            highlights: {
+                displayName: [
+                    "us",
+                    "bank"
+                ],
+                alias: []
+            }
+        },
+        {
+            externalId: "623b776077c015daf581708c",
+            ownerId: "c046047f-0197-43d6-a057-886b6f99817a",
+            displayName: "Capital One",
+            logoUrl: {
+                href: "https://play-lh.googleusercontent.com/GhAZTgji_F_YJ_TmisXH7J0PgIOYNy4vLPULklCV3Ua6cV3epNZki5DxsAe-KZB7XA"
+            },
+            alias: "Capital One",
+            category: "CREDITCARDS",
+            highlights: {
+                displayName: [
+                    "capital",
+                    "one"
+                ],
+                alias: []
+            }
+        },
+        {
             externalId: "5f91ecc29c92e7f690f8608a",
             ownerId: "c046047f-0197-43d6-a057-886b6f99817a",
             displayName: "Apple Card",
@@ -149,7 +183,24 @@
                 ],
                 alias: []
             }
-        }
+        },
+        {
+            externalId: "5f91ed799c92e7f690fcfe95",
+            ownerId: "c046047f-0197-43d6-a057-886b6f99817a",
+            displayName: "Target RedCard",
+            logoUrl: {
+                href: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Target_Corporation_logo_%28vector%29.svg/1200px-Target_Corporation_logo_%28vector%29.svg.png"
+            },
+            alias: "Target RedCard",
+            category: "CREDITCARDS",
+            highlights: {
+                displayName: [
+                    "target",
+                    "redcard"
+                ],
+                alias: []
+            }
+        },
     ];
 
     const originalOpen = XMLHttpRequest.prototype.open;
