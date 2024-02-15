@@ -1,13 +1,15 @@
 // ==UserScript==
 // @name         PayPal Add Biller
 // @namespace    http://tampermonkey.net/
-// @version      0.10.1
+// @version      0.10.2
 // @description  Add old billers to PayPal Bill Pay
 // @author       Apocalypsor
 // @match        https://www.paypal.com/myaccount/payments/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=paypal.com
 // @grant        none
 // @run-at       document-start
+// @updateURL    https://raw.githubusercontent.com/Apocalypsor/Rules/master/UserScript/ppbp-add-biller.user.js
+// @downloadURL  https://raw.githubusercontent.com/Apocalypsor/Rules/master/UserScript/ppbp-add-biller.user.js
 // ==/UserScript==
 
 (function() {
