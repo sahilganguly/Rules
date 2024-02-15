@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         PayPal Add Biller
 // @namespace    http://tampermonkey.net/
-// @version      0.9
+// @version      0.10
 // @description  Add old billers to PayPal Bill Pay
 // @author       Apocalypsor
 // @match        https://www.paypal.com/myaccount/payments/*
@@ -89,13 +89,13 @@
             logoUrl: {
                 href: "https://images.getbills.com/logos/0000006827001.jpg"
             },
-            alia": "Citi",
+            alias: "Citi",
             category: "CREDITCARDS",
             highlights: {
                 displayName: [
                     "citi"
                 ],
-                alia": []
+                alias: []
             }
         },
         {
