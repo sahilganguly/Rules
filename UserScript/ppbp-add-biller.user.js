@@ -121,7 +121,7 @@
             ownerId: "c046047f-0197-43d6-a057-886b6f99817a",
             displayName: "Wells Fargo",
             logoUrl: {
-                href: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Wells_Fargo_Logo_%282020%29.svg/2048px-Wells_Fargo_Logo_%282020%29.svg.png"
+                href: "https://secure2.paymentus.com/rotp/www/images/rpps/Wells%20Fargo_logo.png"
             },
             alias: "Wells Fargo",
             category: "CREDITCARDS",
@@ -138,7 +138,7 @@
             ownerId: "c046047f-0197-43d6-a057-886b6f99817a",
             displayName: "US Bank",
             logoUrl: {
-                href: "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,f_jpg,h_559,q_65,w_639/v1/crm/catalinaislandccvb/usbankshortsales0-7b28c92f5056a36_7b28ca2e-5056-a36a-06032a74b695d9a0.jpg"
+                href: "https://secure2.paymentus.com/rotp/www/images/rpps/US%20Bank_logo.png"
             },
             alias: "US Bank",
             category: "CREDITCARDS",
@@ -155,7 +155,7 @@
             ownerId: "c046047f-0197-43d6-a057-886b6f99817a",
             displayName: "Capital One",
             logoUrl: {
-                href: "https://play-lh.googleusercontent.com/GhAZTgji_F_YJ_TmisXH7J0PgIOYNy4vLPULklCV3Ua6cV3epNZki5DxsAe-KZB7XA"
+                href: "https://secure2.paymentus.com/rotp/www/images/rpps/Capital_One.png"
             },
             alias: "Capital One",
             category: "CREDITCARDS",
@@ -189,7 +189,7 @@
             ownerId: "c046047f-0197-43d6-a057-886b6f99817a",
             displayName: "Target RedCard",
             logoUrl: {
-                href: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Target_Corporation_logo_%28vector%29.svg/1200px-Target_Corporation_logo_%28vector%29.svg.png"
+                href: "https://secure2.paymentus.com/rotp/www/images/rpps/Target.png"
             },
             alias: "Target RedCard",
             category: "CREDITCARDS",
