@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         PayPal Add Biller
 // @namespace    http://tampermonkey.net/
-// @version      0.11.1
+// @version      0.11.2
 // @description  Add old billers to PayPal Bill Pay
 // @author       Apocalypsor
 // @match        https://www.paypal.com/myaccount/payments/*
