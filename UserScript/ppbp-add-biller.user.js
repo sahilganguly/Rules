@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         PayPal Add Biller
 // @namespace    http://tampermonkey.net/
-// @version      0.11.2
+// @version      0.12.1
 // @description  Add old billers to PayPal Bill Pay
 // @author       Apocalypsor
 // @match        https://www.paypal.com/myaccount/payments/*
@@ -15,24 +15,7 @@
 (function() {
     'use strict';
 
-    const customePayees = [
-        {
-            externalId: "5f91ecc09c92e7f690f8569c",
-            ownerId: "c046047f-0197-43d6-a057-886b6f99817a",
-            displayName: "American Express - All Cards",
-            logoUrl: {
-                href: "https://secure2.paymentus.com/rotp/www/images/rpps/American_Express.png"
-            },
-            alias: "American Express",
-            category: "CREDITCARDS",
-            highlights: {
-                displayName: [
-                    "american",
-                    "express"
-                ],
-                alias: []
-            }
-        },
+    const creditCardPayees = [
         {
             externalId: "616ffde06b8cee6bdb96280a-46494e414e4349414c5345525649434553",
             ownerId: "c046047f-0197-43d6-a057-886b6f99817a",
@@ -46,22 +29,6 @@
                 displayName: [
                     "american",
                     "express"
-                ],
-                alias: []
-            }
-        },
-        {
-            externalId: "5f91ece19c92e7f690f92839",
-            ownerId: "c046047f-0197-43d6-a057-886b6f99817a",
-            displayName: "Chase",
-            logoUrl: {
-                href: "https://secure2.paymentus.com/rotp/www/images/rpps/Chase_Bank.png"
-            },
-            alias: "Chase",
-            category: "CREDITCARDS",
-            highlights: {
-                displayName: [
-                    "chase"
                 ],
                 alias: []
             }
@@ -168,6 +135,22 @@
             }
         },
         {
+            externalId: "5f91ed1f9c92e7f690faad47",
+            ownerId: "c046047f-0197-43d6-a057-886b6f99817a",
+            displayName: "HSBC",
+            logoUrl: {
+                href: "https://secure2.paymentus.com/rotp/www/images/rpps/HSBC.png"
+            },
+            alias: "HSBC",
+            category: "CREDITCARDS",
+            highlights: {
+                displayName: [
+                    "hsbc"
+                ],
+                alias: []
+            }
+        },
+        {
             externalId: "5f91ecc29c92e7f690f8608a",
             ownerId: "c046047f-0197-43d6-a057-886b6f99817a",
             displayName: "Apple Card",
@@ -203,15 +186,42 @@
         },
     ];
 
+    const taxPayees = [
+        {
+            externalId: "5f91ed399c92e7f690fb6050",
+            ownerId: "c046047f-0197-43d6-a057-886b6f99817a",
+            displayName: "Maria Pappas Cook County Treasurer",
+            logoUrl: {
+                href: "https://cdn.finovera.com/static/direct/MariaPappasCookCountyTreasurer_logo.png"
+            },
+            alias: "Maria Pappas Cook County Treasurer",
+            category: null,
+            highlights: {
+                displayName: [
+                    "treasurer"
+                ],
+                alias: []
+            }
+        },
+    ];
+
     const originalOpen = XMLHttpRequest.prototype.open;
     XMLHttpRequest.prototype.open = function() {
         this.addEventListener('readystatechange', function() {
-            if (this.readyState === 4 && this.responseURL.includes('suggested-payees/ppbp?')) {
+            if (this.readyState === 4 && (this.responseURL.includes('suggested-payees/ppbp?') || this.responseURL.includes('suggested-payees/pptax?'))) {
                 try {
                     const json = JSON.parse(this.responseText);
-                    json.data.payees.payees = customePayees;
-                    json.data.payees.totalItems = customePayees.length;
-                    json.data.payees.totalPages = 1;
+
+                    if (this.responseURL.includes('suggested-payees/ppbp?')) {
+                        json.data.payees.payees = creditCardPayees;
+                        json.data.payees.totalItems = creditCardPayees.length;
+                        json.data.payees.totalPages = 1;
+                    } else if (this.responseURL.includes('suggested-payees/pptax?')) {
+                        json.data.payees.payees = taxPayees;
+                        json.data.payees.totalItems = taxPayees.length;
+                        json.data.payees.totalPages = 1;
+                    }
+
 
                     const modifiedResponse = JSON.stringify(json);
                     Object.defineProperty(this, 'response', {writable: true});
